@@ -7,6 +7,7 @@ const baseClient = mbxClient({ accessToken: mapBoxToken });
 const geocoder = mbxGeocoding(baseClient)
 module.exports.index = async (req, res) => {
     const campgrounds = await Campground.find({});
+    console.log(JSON.stringify(campgrounds))
     // if(!req.cookies.count) {
     //     res.cookie('count', 1)
     // } else {
